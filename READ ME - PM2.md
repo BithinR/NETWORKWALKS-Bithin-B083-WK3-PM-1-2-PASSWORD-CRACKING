@@ -45,7 +45,9 @@ Crack the passwords of two locked PDF files using the Networkwalks Hash Calculat
 | 🎯 Target File 1 | My Locked PDF1.pdf |
 | 🔑 Password 1 | **password1** |
 | 🎯 Target File 2 | My Locked PDF2.pdf |
-| 🔑 Password 2 | **1qaz2wsx** |
+| 🔑 Password 2 | **password1** |
+| 🎯 Target File 3 | My Locked PDF3.pdf |
+| 🔑 Password 3 | **1qaz2wsx** |
 
 > **Note:** Both tools process files and compute hashes entirely in your browser. No text or file is ever uploaded to a server. All hashing happens locally using the Web Crypto API.
 
@@ -65,9 +67,8 @@ Downloaded the locked PDF file from the Networkwalks lab page:
 
 [https://networkwalks.com/project-task-lab-password-cracking-with-networkwalks-tools/](https://networkwalks.com/project-task-lab-password-cracking-with-networkwalks-tools/)
 
-> 📸 **Screenshot:** `screenshots/pdf1-step1-download-page.png`
->
-> *(Insert screenshot of the Networkwalks lab page showing the download link for My Locked PDF1.pdf)*
+
+
 
 ---
 
@@ -77,11 +78,7 @@ Opened the Hash Calculator in a web browser:
 
 [https://networkwalks.com/hash-calculator/](https://networkwalks.com/hash-calculator/)
 
-The tool has three tabs: **Text**, **File**, and **PDF**. Selected the **PDF** tab.
-
-> 📸 **Screenshot:** `screenshots/pdf1-step2-hash-calculator-open.png`
->
-> *(Insert screenshot of the Networkwalks Hash Calculator page in the browser, with the PDF tab selected)*
+The tool has three tabs: **Text**, **File**, and **PDF**. Selected the **PDF** tab
 
 ---
 
@@ -91,9 +88,8 @@ In the PDF tab, clicked the upload area and selected `My Locked PDF1.pdf`. The t
 
 The hash was displayed in the **PDF Hash** field, starting with `$pdf$4*4*128*...`
 
-> 📸 **Screenshot:** `screenshots/pdf1-step3-hash-extracted.png`
->
-> *(Insert screenshot of the Hash Calculator showing the extracted $pdf$ hash for My Locked PDF1.pdf, with the Copy button visible)*
+
+
 
 ---
 
@@ -108,10 +104,6 @@ The extracted hash for this PDF:
 $pdf$4*4*128*-1060*1*16*55d1a5c14175da44975399e44971d32*32*777fd021a7f3c5ae598c8c6d9bc7f76e00000000000000000000000000000000*32*ceecdac74b19b5a6268bd3b3524e1374c955cbb9cc3c45316494d9446ef81af1
 ```
 
-> 📸 **Screenshot:** `screenshots/pdf1-step4-hash-copied.png`
->
-> *(Insert screenshot showing the hash selected or the Copy button being clicked, confirming the full $pdf$ hash is captured)*
-
 ---
 
 ### Step 5 — Open the Networkwalks Password Cracker
@@ -122,9 +114,8 @@ Opened the Password Cracker tool in a new browser tab:
 
 The tool is a **Dictionary Attack Lab** — it hashes every word in a wordlist and matches it against the PDF hash, using the same core idea as John the Ripper.
 
-> 📸 **Screenshot:** `screenshots/pdf1-step5-password-cracker-open.png`
->
-> *(Insert screenshot of the Networkwalks Password Cracker tool in the browser, showing the empty PDF HASH field and the START CRACKING button)*
+
+
 
 ---
 
@@ -147,10 +138,6 @@ The tool began working through its wordlist, hashing each word and comparing it 
 [+] MATCH password1 ✓
 ```
 
-> 📸 **Screenshot:** `screenshots/pdf1-step6-hash-pasted-cracking.png`
->
-> *(Insert screenshot of the Password Cracker with the hash pasted in the field and the attack running, showing the live log of attempted passwords)*
-
 ---
 
 ### Step 7 — Password Cracked
@@ -161,10 +148,6 @@ The tool found the matching password and displayed the result.
 
 **🔑 Password: `password1`**
 
-> 📸 **Screenshot:** `screenshots/pdf1-step7-password-cracked.png`
->
-> *(Insert screenshot of the Password Cracker showing "PASSWORD CRACKED SUCCESSFULLY" and the password "password1" in green text, with the Copy password button)*
-
 ---
 
 ### Step 8 — Open the Locked PDF
@@ -172,14 +155,6 @@ The tool found the matching password and displayed the result.
 Opened `My Locked PDF1.pdf` in Adobe Acrobat Reader. When prompted for a password, entered `password1`.
 
 The PDF unlocked successfully.
-
-> 📸 **Screenshot:** `screenshots/pdf1-step8-pdf-password-prompt.png`
->
-> *(Insert screenshot of Adobe Acrobat showing the "Enter Password" dialog for My Locked PDF1.pdf)*
-
-> 📸 **Screenshot:** `screenshots/pdf1-step8-pdf-unlocked.png`
->
-> *(Insert screenshot of the PDF open and unlocked, showing the content inside — the Congratulations / flag page)*
 
 ---
 
@@ -193,29 +168,17 @@ Returned to the Networkwalks Hash Calculator and uploaded the second locked PDF 
 
 The tool extracted a new hash value for this file.
 
-> 📸 **Screenshot:** `screenshots/pdf2-step1-hash-extracted.png`
->
-> *(Insert screenshot of the Hash Calculator showing the extracted hash for My Locked PDF2.pdf)*
-
 ---
 
 ### Step 2 — Copy Hash & Open Password Cracker
 
 Copied the full hash value for PDF 2 and opened the Password Cracker. Pasted the hash into the PDF HASH field.
 
-> 📸 **Screenshot:** `screenshots/pdf2-step2-hash-pasted.png`
->
-> *(Insert screenshot of the Password Cracker with PDF 2's hash pasted in the hash field)*
-
 ---
 
 ### Step 3 — Start Cracking
 
 Clicked **START CRACKING**. The built-in wordlist was used. The tool tried passwords sequentially until it reached `1qaz2wsx` — a common keyboard-pattern password.
-
-> 📸 **Screenshot:** `screenshots/pdf2-step3-cracking-in-progress.png`
->
-> *(Insert screenshot of the Password Cracker mid-attack for PDF 2, showing the live log of attempted passwords)*
 
 ---
 
@@ -225,19 +188,11 @@ Clicked **START CRACKING**. The built-in wordlist was used. The tool tried passw
 
 **🔑 Password: `1qaz2wsx`**
 
-> 📸 **Screenshot:** `screenshots/pdf2-step4-password-cracked.png`
->
-> *(Insert screenshot showing "PASSWORD CRACKED SUCCESSFULLY" with "1qaz2wsx" displayed in the result box)*
-
 ---
 
 ### Step 5 — Open the Second Locked PDF
 
 Opened `My Locked PDF2.pdf` and entered the cracked password `1qaz2wsx`. The PDF unlocked successfully.
-
-> 📸 **Screenshot:** `screenshots/pdf2-step5-pdf-unlocked.png`
->
-> *(Insert screenshot of PDF 2 open and unlocked, showing the content inside)*
 
 ---
 
@@ -308,6 +263,6 @@ Both PDFs used in this module were provided by Networkwalks specifically for thi
 
 ## 👤 Author
 
-**Emmanuel Bafi**
-Cybersecurity Intern — Batch B082
+**Bithin Krishna Radhakrihnan**
+Cybersecurity Intern — Batch B083
 Networkwalks Cybersecurity Program | Week 3 | Project Module 2
